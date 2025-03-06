@@ -4,13 +4,13 @@ import LoginPage from "./LoginPage";
 
 function HomePageRedirect() {
     return (
-        <iframe 
+        <iframe
             src = "/homepage.html"
             title = "Home Page"
             style={{ width: "100%", height: "100vh", border: "none" }}
         />
     ); // The component doesn't need to render anything
-  }
+}
 
 const AboutPage = () => {
     return (
@@ -21,7 +21,17 @@ const AboutPage = () => {
         />
     );
 };
-  
+
+const ContactUs = () => {
+    return (
+        <iframe
+            src="/contactus.html"
+            title="Contact Us"
+            style={{ width: "100%", height: "100vh", border: "none" }}
+        />
+    );
+};
+
 
 function App() {
     return (
@@ -30,6 +40,7 @@ function App() {
                 <Route path="/" element={<HomePageRedirect/>} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactUs />} />
             </Routes>
         </Router>
     );
